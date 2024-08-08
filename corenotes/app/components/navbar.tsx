@@ -13,7 +13,7 @@ export default function Navbar() {
         />
         <p className="hidden sm:block">CoreNotes</p>
       </div>
-      <input placeholder="Procure uma nota" className="border border-slate-300 rounded-lg px-1 sm:w-1/2 max-w-screen-sm drop-shadow"></input>
+      <input placeholder="Procure uma nota" className="border border-slate-300 rounded-lg px-1 sm:w-1/2 max-w-screen-sm drop-shadow h-9"></input>
       <button className="sm:px-16 px-6">X</button>
     </div>
   )
