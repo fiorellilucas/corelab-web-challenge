@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Navbar() {
   return (
-    <div className="navbar">
+    <div className="navbar drop-shadow-md">
       <div className="flex items-center">
         <Image
           src="/logo.png"
@@ -13,7 +13,7 @@ export default function Navbar() {
         />
         <p className="hidden sm:block">CoreNotes</p>
       </div>
-      <input placeholder="Procure uma nota" className="border border-slate-300 rounded-lg px-1 sm:w-1/2 max-w-screen-sm"></input>
+      <input placeholder="Procure uma nota" className="border border-slate-300 rounded-lg px-1 sm:w-1/2 max-w-screen-sm drop-shadow"></input>
       <button className="sm:px-16 px-6">X</button>
     </div>
   )
