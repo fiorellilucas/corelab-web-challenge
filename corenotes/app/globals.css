@@ -20,6 +20,17 @@ body {
   background: var(--background-hex);
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+img {
+  margin: 0.5em
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
