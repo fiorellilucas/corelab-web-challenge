@@ -101,6 +101,7 @@ export default function Nota(props: NotaProps) {
                 method: "DELETE"
               })
             }
+            location.reload()
           }}><Image src="/icone-deletar.png" width={20} height={20} alt="Deletar nota" /></button>
         </div>
       </div>
