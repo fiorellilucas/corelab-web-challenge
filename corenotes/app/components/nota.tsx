@@ -28,7 +28,7 @@ export default function Nota(props: NotaProps) {
     <div className={"bg-[#" + props.cor + "] flex flex-col border border-slate-300 rounded-3xl sm:w-1/2 max-w-screen-sm drop-shadow h-72 p-1 px-4 mb-10"} id={"nota" + props.id}>
       <div className="flex justify-between border-b border-black items-center">
         <strong>
-          <textarea disabled rows={1} className="flex h-auto w-full bg-inherit py-2" id={"titulo" + props.id} defaultValue={props.titulo} />
+          <textarea disabled rows={1} className="flex h-auto w-full bg-inherit py-2 tituloNota" id={"titulo" + props.id} defaultValue={props.titulo} />
         </strong>
         <Image
           src={props.favorito == true ? "/estrela-amarela.png" : "/estrela-branca.png"}
@@ -40,7 +40,7 @@ export default function Nota(props: NotaProps) {
       </div>
       <div className="flex flex-col grow justify-between">
 
-        <textarea disabled rows={7} className="py-2 bg-inherit" id={"conteudo" + props.id} defaultValue={props.conteudo} />
+        <textarea disabled rows={7} className="py-2 bg-inherit conteudoNota" id={"conteudo" + props.id} defaultValue={props.conteudo} />
 
         <PaletaCores notaId={props.id} />
         <div className="flex justify-between">
