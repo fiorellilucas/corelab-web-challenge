@@ -15,7 +15,7 @@ export default function PaletaCores( props: PaletaProps ) {
   }
   
   return (
-    <div className="hidden flex-wrap justify-evenly border border-slate-300 rounded-3xl shadow-md bg-white" id={"paleta" + props.notaId}>
+    <div className="hidden flex-wrap justify-evenly border border-slate-300 rounded-3xl shadow-md bg-white max-w-[268px] self-center" id={"paleta" + props.notaId}>
       <div className="bg-[#BAE2FF] size-10 border-slate-400 border rounded-full m-1" onClick={() => { TrocarCor("BAE2FF") }}></div>
       <div className="bg-[#B9FFDD] size-10 border-slate-400 border rounded-full m-1" onClick={() => { TrocarCor("B9FFDD") }}></div>
       <div className="bg-[#FFE8AC] size-10 border-slate-400 border rounded-full m-1" onClick={() => { TrocarCor("FFE8AC") }}></div>
