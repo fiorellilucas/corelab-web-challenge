@@ -25,7 +25,7 @@ export default function Nota(props: NotaProps) {
   }
 
   return (
-    <div className={"bg-[#" + props.cor + "] flex flex-col border border-slate-300 rounded-3xl sm:w-1/2 max-w-screen-sm drop-shadow h-72 p-1 px-4 my-14"} id={"nota" + props.id}>
+    <div className={"bg-[#" + props.cor + "] flex flex-col border border-slate-300 rounded-3xl sm:w-1/2 max-w-screen-sm drop-shadow h-72 p-1 px-4 mb-10"} id={"nota" + props.id}>
       <div className="flex justify-between border-b border-black items-center">
         <strong>
           <textarea disabled rows={1} className="flex h-auto w-full bg-inherit py-2" id={"titulo" + props.id} defaultValue={props.titulo} />

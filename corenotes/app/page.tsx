@@ -27,13 +27,30 @@ export default function Home() {
   return (
     <main className="p-5 mx-6">
       <NovaNota />
-      {
+      <div>
+        <h1 className="ml-2 mt-10 mb-2">Favoritas</h1>
+        {
+          notas.map((nota): any => {
+            if (nota.favorito == true) {
+              return (
+                <Nota key={nota.id} id={nota.id} titulo={nota.titulo} conteudo={nota.conteudo} favorito={nota.favorito} cor={nota.cor} criadaEm={nota.criadaEm} />
+              )
+            }
+          })
+        }
+      </div>
+      <div>
+        <h1 className="ml-2 mb-2">Outras</h1>
+        {
         notas.map((nota): any => {
-          return (
-            <Nota key={nota.id} id={nota.id} titulo={nota.titulo} conteudo={nota.conteudo} favorito={nota.favorito} cor={nota.cor} criadaEm={nota.criadaEm} />
-          )
+          if (nota.favorito == false) {
+            return (
+              <Nota key={nota.id} id={nota.id} titulo={nota.titulo} conteudo={nota.conteudo} favorito={nota.favorito} cor={nota.cor} criadaEm={nota.criadaEm} />
+            )
+          }
         })
       }
+      </div>
     </main>
   );
 }
