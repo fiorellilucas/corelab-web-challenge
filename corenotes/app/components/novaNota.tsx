@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function NovaNota() {
   return (
-    <div className="bg-white border border-slate-300 rounded-3xl sm:w-1/2 max-w-screen-sm drop-shadow h-56 p-1 px-4">
+    <div className="bg-white border border-slate-300 rounded-3xl sm:w-1/2 max-w-screen-sm drop-shadow h-50 p-1 px-4">
       <div className="flex justify-between border-b-2">
         <input type="text" placeholder="Título" className="w-full" id="novaNotaTitulo" />
         <Image
@@ -13,7 +13,7 @@ export default function NovaNota() {
         />
       </div>
       <div className="flex flex-col justify-between grow">
-        <textarea rows={5} placeholder="Criar nota..." className="w-full my-2" id="novaNotaConteudo" />
+        <textarea rows={3} placeholder="Criar nota..." className="w-full my-2" id="novaNotaConteudo" />
         <div className="flex justify-between">
           <Image
             src="/icone-concluir.png"
