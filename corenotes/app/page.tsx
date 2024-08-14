@@ -26,7 +26,10 @@ export default function Home() {
 
   return (
     <main className="p-5 mx-6">
-      <NovaNota />
+      <div className="flex justify-center">
+        <NovaNota /> 
+      </div>
+      
       <div>
         <h1 className="ml-2 mt-10 mb-2">Favoritas</h1>
         {
