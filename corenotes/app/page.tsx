@@ -27,32 +27,36 @@ export default function Home() {
   return (
     <main className="p-5 mx-6">
       <div className="flex justify-center">
-        <NovaNota /> 
+        <NovaNota />
       </div>
-      
+
       <div>
         <h1 className="ml-2 mt-10 mb-2">Favoritas</h1>
-        {
-          notas.map((nota): any => {
-            if (nota.favorito == true) {
-              return (
-                <Nota key={nota.id} id={nota.id} titulo={nota.titulo} conteudo={nota.conteudo} favorito={nota.favorito} cor={nota.cor} criadaEm={nota.criadaEm} />
-              )
-            }
-          })
-        }
+        <div className="flex flex-wrap">
+          {
+            notas.map((nota): any => {
+              if (nota.favorito == true) {
+                return (
+                  <Nota key={nota.id} id={nota.id} titulo={nota.titulo} conteudo={nota.conteudo} favorito={nota.favorito} cor={nota.cor} criadaEm={nota.criadaEm} />
+                )
+              }
+            })
+          }
+        </div>
       </div>
       <div>
         <h1 className="ml-2 mb-2">Outras</h1>
-        {
-        notas.map((nota): any => {
-          if (nota.favorito == false) {
-            return (
-              <Nota key={nota.id} id={nota.id} titulo={nota.titulo} conteudo={nota.conteudo} favorito={nota.favorito} cor={nota.cor} criadaEm={nota.criadaEm} />
-            )
+        <div className="flex flex-wrap">
+          {
+            notas.map((nota): any => {
+              if (nota.favorito == false) {
+                return (
+                  <Nota key={nota.id} id={nota.id} titulo={nota.titulo} conteudo={nota.conteudo} favorito={nota.favorito} cor={nota.cor} criadaEm={nota.criadaEm} />
+                )
+              }
+            })
           }
-        })
-      }
+        </div>
       </div>
     </main>
   );

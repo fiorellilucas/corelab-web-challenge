@@ -13,7 +13,7 @@ export default function NovaNota() {
         />
       </div>
       <div className="flex flex-col justify-between grow">
-        <textarea rows={3} placeholder="Criar nota..." className="w-full my-2" id="novaNotaConteudo" />
+        <textarea rows={3} placeholder="Criar nota..." className="w-full my-2 resize-none" id="novaNotaConteudo" />
         <div className="flex justify-between">
           <Image
             src="/icone-concluir.png"
