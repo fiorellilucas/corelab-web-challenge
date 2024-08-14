@@ -1,15 +1,25 @@
 import Image from "next/image";
+import { useState } from "react";
 
 export default function NovaNota() {
+  const [favorito, setFavorito] = useState(0)
+  
   return (
     <div className="bg-white border border-slate-300 rounded-3xl sm:w-1/2 max-w-screen-sm drop-shadow h-50 p-1 px-4">
       <div className="flex justify-between border-b-2">
         <input type="text" placeholder="Título" className="w-full" id="novaNotaTitulo" />
         <Image
-          src="/estrela-branca.png"
+          src={favorito == 1 ? "/estrela-amarela.png" : "/estrela-branca.png"}
           width={20}
           height={20}
           alt="Favoritar nota"
+          onClick={() => {
+            if (favorito == 0) {
+              setFavorito(1)
+            } else {
+              setFavorito(0)
+            }
+          }}
         />
       </div>
       <div className="flex flex-col justify-between grow">
@@ -30,7 +40,8 @@ export default function NovaNota() {
                   headers: { "Content-Type": "application/json" },
                   body: JSON.stringify({
                     "titulo": novaNotaTitulo.value,
-                    "conteudo": novaNotaConteudo.value
+                    "conteudo": novaNotaConteudo.value,
+                    "favorito": favorito
                   })
                 }
               )
